@@ -2,6 +2,8 @@ var express = require('express'); // http://expressjs.com/api.html
 
 var app = express.createServer(express.logger());
 
+var fs = require('fs');
+
 app.get('/', function(request, response) {
   var content = fs.readFileSync("index.html","utf8");
   response.send( content );
